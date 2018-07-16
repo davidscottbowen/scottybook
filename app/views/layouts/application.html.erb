@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Railsapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-brand" href="#">ScottyBook</a>
+      </div>
+  <ul class="nav navbar-nav">
+    <li><%= link_to "About", about_path %></li>
+    <li><%= link_to "Home", home_path %></li>
+    <li><%= link_to "Services", services_path %> </li>
+    <li><%= link_to "Posts", posts_path %> </li>
+    <li><%= link_to "Contact", contact_path %> </li>
+    <li><%= link_to "Create Post", new_post_path %></li>
+  </ul>
+</div>
+</nav>
+
+<div class="container">
+<%= yield %>
+</div>
+  </body>
+</html>
